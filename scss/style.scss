@@ -1,0 +1,528 @@
+//linea de comentario
+/* para ambos archivos */
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap');
+
+@import "base/variables";
+@import "base/mapas";
+@import "base/listas";
+@import "base/mixin";
+@import "base/extend";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//NESTING
+
+/*STYLE INDEX*/
+
+body{
+    background-color: whitesmoke;
+/*header*/
+    header{
+        padding: 10px;
+        border-bottom: 1px solid $color-principal;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(4px);
+        div{
+            .logo{
+                height: 65px;
+                margin-left: 50px; 
+            }
+            nav{
+                div{
+                    div{
+                        .menu{
+                            font-size: nth($tamaño-fuente,3);
+                            text-transform: uppercase;
+                            font-family: $tipografia;
+                            font-weight: bolder;
+                            text-shadow: 0.5px 0.5px 0.5px grey;
+                            /*animacion menu*/
+                            li:hover{
+                                transform: scale(0.9);
+                                background-color: $color-principal;
+                                border-radius: 10px;
+                                color: whitesmoke;
+                                a:hover{
+                                    color: whitesmoke;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+    
+/*main*/
+    .principal{
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4b/Lightning3.jpg");
+        background-size: cover;
+        height: 120vh;
+        background-repeat: no-repeat;
+        background-position-y: 10px;
+        @include media-up (md){
+            background-size: auto;
+            height: 110vh;
+    }
+        .textoPrincipal{
+            h1{
+                @include estilo-tituloprincipal;
+                font-size: nth($tamaño-fuente,6);
+                text-shadow: 3px 3px 4px rgb(136, 134, 134);
+                font-family: $tipografia;
+                color: $color-tipografia-n;
+                @include media-up (md){
+                    font-size: 36px;
+                    margin-left: 50px;
+                    padding-top: 200px;
+            }
+            }
+            p{
+                font-size: nth($tamaño-fuente,5);
+                font-weight: bolder;                
+                background-color: $color-transparente;
+                font-family: $tipografia;        
+                line-height: 30px;
+                margin: 30px 450px 0 50px;
+                color: $color-tipografia-n;
+                padding: 10px;
+                @include media-up (md){
+                    font-size: 18px;
+                    margin: 30px 80px 0 50px;
+            }
+            }
+        }
+    }
+    
+/*section*/
+    .introduccion{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        column-gap: 10px;          
+        
+           
+        .cuadro1{
+        font-size: nth($tamaño-fuente,4);
+        font-weight: bold;
+        font-family: $tipografia;
+        margin: 20px 25px 20px 50px;
+        line-height: 30px;        
+        text-align: center;
+        background-color: $color-transparente;        
+        }
+
+        .cuadro2{
+        font-size: nth($tamaño-fuente,2);
+        font-weight: bold;
+        font-family: $tipografia;
+        margin: 20px 50px 20px 25px;
+        line-height: 30px;        
+        text-align: center;
+        background-color: $color-transparente;
+
+        }                          
+    }    
+        
+
+/*footer*/
+    .footer{
+        background-color: $color-principal;
+        font-family: $tipografia;
+        font-size: nth($tamaño-fuente,2);
+        div{
+            div{
+                .logos-footer{
+                    @include media-up (md){
+                        text-align: center;
+                    }
+                    a{
+                        .logo-footer{
+                            height: 65px;
+                            margin: 20px 0 20px 0;
+                        }
+                    }
+                    div{
+                        .logoredes{
+                            height: 30px;
+                            margin: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .copy{
+            font-size: nth($tamaño-fuente,1);
+        }
+    }
+}
+/*STYLE CONTACTO*/
+
+body{
+    main{
+        .tituloUbicacion{
+            font-size: 28px;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            text-shadow: gray 1px 0;
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+        }
+        .mapa{
+            padding: 0 20px 0 20px;
+            width: 100%;
+        }
+        .consultasdatos{
+            /* Para trabajar las areas de Contacto*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            grid-template-areas: "formulario telefonos ubicacion";
+            gap: 100px;
+            margin-top: 30px;
+            form{
+                .formulario{
+                    /* Para trabajar las areas de Contacto*/
+                    grid-area: formulario;
+                    margin: 0 0 20px 20px;
+                    legend{
+                        font-size: 24px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bold;
+                        text-shadow: gray 1px 0;
+                        margin-bottom: 10px;
+                    }
+                    div{
+                        padding-left: 20px;
+                        padding-bottom: 5px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bolder;
+                        font-size: 15px;
+                    }
+                    .botones{
+                        input{
+                            @extend %box;
+                            border-color: map-get($map: $standard, $key: border-standard );
+                            background-color: map-get($map: $standard, $key: bg-standard );
+                            color: map-get($map: $standard, $key: color-standard );
+                            font-size: map-get($map: $standard, $key: font-standard );
+                        }
+                        // animacion contacto
+                        input:hover{
+                            transform: scale(0.9);
+                            background-color: whitesmoke;
+                            border-radius: 12px;
+                            color: black;
+                            border-color: rgb(36, 36, 36);
+                        }
+                    }
+                }
+            }
+            .emailtelefonos{
+                 /* Para trabajar las areas de Contacto*/
+                 grid-area: telefonos;
+                 justify-self: center;
+                .telefonos{
+                    font-size: 15px;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: bolder;
+                    line-height: 50px;
+                }
+            }
+            .ubicacionHorario{
+                 /* Para trabajar las areas de Contacto*/
+                grid-area: ubicacion;
+                justify-self: end;
+                padding-right: 20px;
+                .ubicacion{
+                    h2{
+                        font-size: 17px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bolder;
+                        text-shadow: gray 1px 1px 1px;
+                        padding: 10px 0 10px 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bolder;
+                        padding: 0 0 5px 20px; 
+                    }
+                }
+                .horario{
+                    h2{
+                        font-size: 15px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bolder;
+                        padding: 80px 0 5px 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: bolder;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*STYLE NOSOTROS*/
+
+body{
+    .introduccionnosotras{
+        .titulonosotras{
+            font-size: 28px;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            text-shadow: gray 1px 0;
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+        }
+        .parrafonosotras{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+        .nombresarquitectas{
+            p{
+                font-size: 14px;
+                font-weight: bold;
+                font-family: 'Raleway', sans-serif;
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+/*STYLE SERVICIOS*/
+
+body{
+    .servicios{
+        /* Para trabajar las areas de html servicios */
+        width: 100%;
+        .tituloservicios{
+            font-size: 28px;
+            text-transform: uppercase;
+            font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+            font-weight: 1500;
+            text-shadow: gray 1px 0;
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+        }
+        .gruposervicios{
+            /* Para trabajar las areas de html servicios */
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+            .servicio01{
+                img{
+                    height: 150px;
+                    padding-left: 130px;
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 130px;
+                    text-shadow: gray 1px 0;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 130px;
+                }
+            }
+            .servicio02{
+                img{
+                    height: 150px;
+                    padding-left: 20px;
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 20px;
+                    text-shadow: gray 1px 0;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 20px;
+                }
+            }
+            .servicio03{
+                img{
+                    height: 150px;
+                    padding-left: 20px;
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 20px;
+                    text-shadow: gray 1px 0;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 20px;
+                }
+            }
+            .servicio04{
+                img{
+                    height: 150px;
+                    padding-left: 20px;
+                    padding-right: 130px;
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 20px;
+                    text-shadow: gray 1px 0;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 900;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 120px 10px 20px;
+                }
+            }
+        }
+    }
+}
+
+/*STYLE PROYECTOS*/
+
+body{
+    .proyectos{
+        /* Para trabajar las areas de html proyectos */
+        width: 100%;
+        .tituloproyectos{
+            font-size: 28px;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            text-shadow: gray 1px 0;
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+        }
+        .listadoproyectos{
+            /* Para trabajar las areas de html proyectos */
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            row-gap: 10px;
+            .proyecto01{
+                img{
+                    width: 600px;
+                    align-self: center;
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 0px;
+                    text-shadow: gray 1px 0;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 10px 0px 10px 0px;
+                    text-align: center; 
+                }
+            }
+            .proyecto02{
+                img{
+                    width: 600px;
+                    align-self: center;
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 0px;
+                    text-shadow: gray 1px 0;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 10px 0px 10px 0px;
+                    text-align: center; 
+                }
+            }
+            .proyecto03{
+                img{
+                    width: 600px;
+                    align-self: center;
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 0px;
+                    text-shadow: gray 1px 0;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 10px 0px 10px 0px;
+                    text-align: center; 
+                }
+            }
+            .proyecto04{
+                img{
+                    width: 600px;
+                    align-self: center;
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    line-height: 20px;
+                    margin: 10px 0px 10px 0px;
+                    text-shadow: gray 1px 0;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 10px 0px 10px 0px;
+                    text-align: center; 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,393 @@
+/* para ambos archivos */
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap");
+body main .consultasdatos form .formulario .botones input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px 0 0 100px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*STYLE INDEX*/
+body {
+  background-color: whitesmoke;
+  /*header*/
+  /*main*/
+  /*section*/
+  /*footer*/ }
+  body header {
+    padding: 10px;
+    border-bottom: 1px solid #a69eec;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(4px); }
+    body header div .logo {
+      height: 65px;
+      margin-left: 50px; }
+    body header div nav div div .menu {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: bolder;
+      text-shadow: 0.5px 0.5px 0.5px grey;
+      /*animacion menu*/ }
+      body header div nav div div .menu li:hover {
+        transform: scale(0.9);
+        background-color: #a69eec;
+        border-radius: 10px;
+        color: whitesmoke; }
+        body header div nav div div .menu li:hover a:hover {
+          color: whitesmoke; }
+  body .principal {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4b/Lightning3.jpg");
+    background-size: cover;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position-y: 10px; }
+    @media screen and (max-width: 768px) {
+      body .principal {
+        background-size: auto;
+        height: 110vh; } }
+    body .principal .textoPrincipal h1 {
+      font-weight: bolder;
+      text-shadow: 3px 3px 4px #888686;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      margin-left: 50px;
+      padding-top: 80px;
+      font-size: 40px;
+      text-shadow: 3px 3px 4px #888686;
+      font-family: "Raleway", sans-serif;
+      color: #363535; }
+      @media screen and (max-width: 768px) {
+        body .principal .textoPrincipal h1 {
+          font-size: 36px;
+          margin-left: 50px;
+          padding-top: 200px; } }
+    body .principal .textoPrincipal p {
+      font-size: 22px;
+      font-weight: bolder;
+      background-color: rgba(112, 109, 109, 0.3);
+      font-family: "Raleway", sans-serif;
+      line-height: 30px;
+      margin: 30px 450px 0 50px;
+      color: #363535;
+      padding: 10px; }
+      @media screen and (max-width: 768px) {
+        body .principal .textoPrincipal p {
+          font-size: 18px;
+          margin: 30px 80px 0 50px; } }
+  body .introduccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 10px; }
+    body .introduccion .cuadro1 {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Raleway", sans-serif;
+      margin: 20px 25px 20px 50px;
+      line-height: 30px;
+      text-align: center;
+      background-color: rgba(112, 109, 109, 0.3); }
+    body .introduccion .cuadro2 {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "Raleway", sans-serif;
+      margin: 20px 50px 20px 25px;
+      line-height: 30px;
+      text-align: center;
+      background-color: rgba(112, 109, 109, 0.3); }
+  body .footer {
+    background-color: #a69eec;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px; }
+    @media screen and (max-width: 768px) {
+      body .footer div div .logos-footer {
+        text-align: center; } }
+    body .footer div div .logos-footer a .logo-footer {
+      height: 65px;
+      margin: 20px 0 20px 0; }
+    body .footer div div .logos-footer div .logoredes {
+      height: 30px;
+      margin: 2px; }
+    body .footer .copy {
+      font-size: 12px; }
+
+/*STYLE CONTACTO*/
+body main .tituloUbicacion {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: gray 1px 0;
+  text-align: center;
+  padding: 20px 20px 20px 20px; }
+
+body main .mapa {
+  padding: 0 20px 0 20px;
+  width: 100%; }
+
+body main .consultasdatos {
+  /* Para trabajar las areas de Contacto*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "formulario telefonos ubicacion";
+  gap: 100px;
+  margin-top: 30px; }
+  body main .consultasdatos form .formulario {
+    /* Para trabajar las areas de Contacto*/
+    grid-area: formulario;
+    margin: 0 0 20px 20px; }
+    body main .consultasdatos form .formulario legend {
+      font-size: 24px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      text-shadow: gray 1px 0;
+      margin-bottom: 10px; }
+    body main .consultasdatos form .formulario div {
+      padding-left: 20px;
+      padding-bottom: 5px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      font-size: 15px; }
+    body main .consultasdatos form .formulario .botones input {
+      border-color: 1px solid black;
+      background-color: black;
+      color: white;
+      font-size: 14px; }
+    body main .consultasdatos form .formulario .botones input:hover {
+      transform: scale(0.9);
+      background-color: whitesmoke;
+      border-radius: 12px;
+      color: black;
+      border-color: #242424; }
+  body main .consultasdatos .emailtelefonos {
+    /* Para trabajar las areas de Contacto*/
+    grid-area: telefonos;
+    justify-self: center; }
+    body main .consultasdatos .emailtelefonos .telefonos {
+      font-size: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      line-height: 50px; }
+  body main .consultasdatos .ubicacionHorario {
+    /* Para trabajar las areas de Contacto*/
+    grid-area: ubicacion;
+    justify-self: end;
+    padding-right: 20px; }
+    body main .consultasdatos .ubicacionHorario .ubicacion h2 {
+      font-size: 17px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      text-shadow: gray 1px 1px 1px;
+      padding: 10px 0 10px 20px; }
+    body main .consultasdatos .ubicacionHorario .ubicacion p {
+      font-size: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      padding: 0 0 5px 20px; }
+    body main .consultasdatos .ubicacionHorario .horario h2 {
+      font-size: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      padding: 80px 0 5px 20px; }
+    body main .consultasdatos .ubicacionHorario .horario p {
+      font-size: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bolder;
+      padding-left: 20px; }
+
+/*STYLE NOSOTROS*/
+body .introduccionnosotras .titulonosotras {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: gray 1px 0;
+  text-align: center;
+  padding: 20px 20px 20px 20px; }
+
+body .introduccionnosotras .parrafonosotras {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  line-height: 30px;
+  padding-left: 15px; }
+
+body .introduccionnosotras .nombresarquitectas p {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 5px; }
+
+/*STYLE SERVICIOS*/
+body .servicios {
+  /* Para trabajar las areas de html servicios */
+  width: 100%; }
+  body .servicios .tituloservicios {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 1500;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px; }
+  body .servicios .gruposervicios {
+    /* Para trabajar las areas de html servicios */
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.5fr; }
+    body .servicios .gruposervicios .servicio01 img {
+      height: 150px;
+      padding-left: 130px; }
+    body .servicios .gruposervicios .servicio01 h2 {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 130px;
+      text-shadow: gray 1px 0; }
+    body .servicios .gruposervicios .servicio01 p {
+      font-size: 14px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 130px; }
+    body .servicios .gruposervicios .servicio02 img {
+      height: 150px;
+      padding-left: 20px; }
+    body .servicios .gruposervicios .servicio02 h2 {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 20px;
+      text-shadow: gray 1px 0; }
+    body .servicios .gruposervicios .servicio02 p {
+      font-size: 14px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 20px; }
+    body .servicios .gruposervicios .servicio03 img {
+      height: 150px;
+      padding-left: 20px; }
+    body .servicios .gruposervicios .servicio03 h2 {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 20px;
+      text-shadow: gray 1px 0; }
+    body .servicios .gruposervicios .servicio03 p {
+      font-size: 14px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 20px; }
+    body .servicios .gruposervicios .servicio04 img {
+      height: 150px;
+      padding-left: 20px;
+      padding-right: 130px; }
+    body .servicios .gruposervicios .servicio04 h2 {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 20px;
+      text-shadow: gray 1px 0; }
+    body .servicios .gruposervicios .servicio04 p {
+      font-size: 14px;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 120px 10px 20px; }
+
+/*STYLE PROYECTOS*/
+body .proyectos {
+  /* Para trabajar las areas de html proyectos */
+  width: 100%; }
+  body .proyectos .tituloproyectos {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px; }
+  body .proyectos .listadoproyectos {
+    /* Para trabajar las areas de html proyectos */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10px; }
+    body .proyectos .listadoproyectos .proyecto01 img {
+      width: 600px;
+      align-self: center; }
+    body .proyectos .listadoproyectos .proyecto01 h2 {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 0px;
+      text-shadow: gray 1px 0;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto01 p {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      margin: 10px 0px 10px 0px;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto02 img {
+      width: 600px;
+      align-self: center; }
+    body .proyectos .listadoproyectos .proyecto02 h2 {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 0px;
+      text-shadow: gray 1px 0;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto02 p {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      margin: 10px 0px 10px 0px;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto03 img {
+      width: 600px;
+      align-self: center; }
+    body .proyectos .listadoproyectos .proyecto03 h2 {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 0px;
+      text-shadow: gray 1px 0;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto03 p {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      margin: 10px 0px 10px 0px;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto04 img {
+      width: 600px;
+      align-self: center; }
+    body .proyectos .listadoproyectos .proyecto04 h2 {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      line-height: 20px;
+      margin: 10px 0px 10px 0px;
+      text-shadow: gray 1px 0;
+      text-align: center; }
+    body .proyectos .listadoproyectos .proyecto04 p {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      margin: 10px 0px 10px 0px;
+      text-align: center; }
